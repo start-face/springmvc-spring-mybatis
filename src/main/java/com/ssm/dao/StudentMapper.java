@@ -10,6 +10,9 @@ import java.util.List;
  */
 
 public interface StudentMapper {
+
+    void insertOne(Student student);
+
     Student findStudentByUserName(Student student);
 
     List<Student> getList();

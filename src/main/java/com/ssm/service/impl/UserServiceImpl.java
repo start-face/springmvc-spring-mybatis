@@ -3,6 +3,8 @@ package com.ssm.service.impl;
 import com.ssm.dao.UserMapper;
 import com.ssm.model.UserModel;
 import com.ssm.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,8 @@ import org.springframework.stereotype.Service;
 @Service("userService")
 public class UserServiceImpl implements UserService {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+
     @Autowired
     private UserMapper userMapper;
 
@@ -20,5 +24,17 @@ public class UserServiceImpl implements UserService {
     public UserModel findUserByUserName(UserModel userModel) {
 
         return userMapper.findUserByUserName(userModel);
+    }
+
+    @Override
+    public UserModel insertOne(UserModel userModel) {
+
+        try {
+            userMapper.insertOne(userModel);
+            return userModel;
+        } catch (Exception e) {
+            logger.error("insertOne error !!", e);
+            return null;
+        }
     }
 }

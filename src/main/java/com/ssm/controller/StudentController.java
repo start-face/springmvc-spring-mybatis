@@ -20,15 +20,28 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @RequestMapping("/insertOne")
+    public String insertOne(HttpServletRequest request) {
+
+        Student student = new Student();
+        student.setSname("张三")
+                .setFenshu(100)
+                .setKecheng("Chinese");
+
+        Student student1 = studentService.insertOne(student);
+        request.setAttribute("user", student1);
+        return "result";
+    }
+
     @RequestMapping("/show")
-    public String showStudent(HttpServletRequest request){
-        request.setAttribute("user",studentService.findStudentByUserName(new Student().setSname("曹操")));
+    public String showStudent(HttpServletRequest request) {
+        request.setAttribute("user", studentService.findStudentByUserName(new Student().setSname("曹操")));
         return "success";
     }
 
     @RequestMapping("/list")
-    public String showList(HttpServletRequest request){
-        request.setAttribute("listOracle",studentService.getList());
+    public String showList(HttpServletRequest request) {
+        request.setAttribute("listOracle", studentService.getList());
         return "showList";
     }
 }

@@ -10,4 +10,6 @@ import com.ssm.model.UserModel;
 public interface UserMapper {
 
     UserModel findUserByUserName(UserModel userModel);
+
+    void insertOne(UserModel userModel);
 }

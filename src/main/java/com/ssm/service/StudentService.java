@@ -9,6 +9,9 @@ import java.util.List;
  * @Created 2018-01-28 20:30
  */
 public interface StudentService {
+
+    Student insertOne(Student student);
+
     Student findStudentByUserName(Student student);
 
     List<Student> getList();

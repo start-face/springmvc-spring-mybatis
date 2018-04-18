@@ -5,10 +5,15 @@
 <mapper namespace="com.ssm.dao.StudentMapper">
 
     <!--<resultMap type="Student" id="studentMap">-->
-        <!--<result property="sname" column="sname"/>-->
-        <!--<result property="kecheng" column="kecheng"/>-->
-        <!--<result property="fenshu" column="fenshu"/>-->
+    <!--<result property="sname" column="sname"/>-->
+    <!--<result property="kecheng" column="kecheng"/>-->
+    <!--<result property="fenshu" column="fenshu"/>-->
     <!--</resultMap>-->
+
+    <!-- 插入一条数据 -->
+    <insert id="insertOne" parameterType="com.ssm.model.Student">
+        insert into student(sname,kecheng,fenshu) values (#{sname},#{kecheng},#{fenshu})
+    </insert>
 
     <!--oracle查询一条记录-->
     <select id="findStudentByUserName" parameterType="com.ssm.model.Student" resultType="com.ssm.model.Student">

@@ -11,4 +11,6 @@ import org.springframework.stereotype.Repository;
 public interface UserService {
 
     UserModel findUserByUserName(UserModel userModel);
+
+    UserModel insertOne(UserModel userModel);
 }
