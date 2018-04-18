@@ -10,7 +10,7 @@
 
     <!--mysql查询一条记录-->
     <select id="findUserByUserName" parameterType="com.ssm.model.UserModel" resultType="com.ssm.model.UserModel">
-        SELECT * FROM face WHERE username=#{userName}
+        SELECT * FROM user_model WHERE username=#{userName}
     </select>
 
     <!--mysql添加一条记录-->

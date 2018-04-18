@@ -9,15 +9,26 @@ import com.google.common.base.MoreObjects;
 
 public class UserModel {
 
+    private Long id;
     private String userName;
     private String passWord;
 
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this)
+                .add("id", id)
                 .add("userName", userName)
                 .add("passWord", passWord)
                 .toString();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public UserModel setId(Long id) {
+        this.id = id;
+        return this;
     }
 
     public String getUserName() {

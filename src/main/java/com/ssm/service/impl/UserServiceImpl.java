@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author FaceFeel
  * @Created 2018-01-28 19:48
@@ -21,7 +23,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public UserModel findUserByUserName(UserModel userModel) {
+    public List<UserModel> findUserByUserName(UserModel userModel) {
 
         return userMapper.findUserByUserName(userModel);
     }

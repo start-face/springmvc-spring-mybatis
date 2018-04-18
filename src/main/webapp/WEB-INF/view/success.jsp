@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
@@ -11,6 +12,21 @@
     <title>结果测试界面</title>
 </head>
 <body>
-    <h1>收到的后台数据是：${user}</h1>
+    <h1>收到的后台数据是</h1>
+
+    <table cellspacing="0" cellpadding="0" border="1">
+        <tr>
+            <th>主键</th>
+            <th>用户名</th>
+            <th>密码</th>
+        </tr>
+        <c:forEach items="${user}" var="one">
+            <tr>
+                <td>${one.id}</td>
+                <td>${one.userName}</td>
+                <td>${one.passWord}</td>
+            </tr>
+        </c:forEach>
+    </table>
 </body>
 </html>

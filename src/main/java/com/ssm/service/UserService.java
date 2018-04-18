@@ -3,6 +3,8 @@ package com.ssm.service;
 import com.ssm.model.UserModel;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @author FaceFeel
  * @Created 2018-01-28 19:44
@@ -10,7 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserService {
 
-    UserModel findUserByUserName(UserModel userModel);
+    List<UserModel> findUserByUserName(UserModel userModel);
 
     UserModel insertOne(UserModel userModel);
 }

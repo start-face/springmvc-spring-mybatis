@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 /**
  * @author FaceFeel
@@ -21,9 +21,10 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/show")
-    public String showUser(HttpServletRequest request, HttpServletResponse response) {
+    public String showUser(HttpServletRequest request) {
 
-        request.setAttribute("user", userService.findUserByUserName(new UserModel().setUserName("smith")));
+        List<UserModel> userModel = userService.findUserByUserName(new UserModel().setUserName("tom"));
+        request.setAttribute("user", userModel);
         return "success";
     }
 
