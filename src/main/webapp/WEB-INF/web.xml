@@ -50,6 +50,12 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
 
+  <!-- 配置允许跨域访问
+  <filter-mapping>
+    <filter-name>CorsFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>  -->
+
   <servlet-mapping>
     <servlet-name>SpringMVC</servlet-name>
     <url-pattern>/</url-pattern>
