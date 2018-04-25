@@ -305,7 +305,7 @@
 
     <!-- 需要的插件 -->
     <build>
-        <finalName>tuhao mysql</finalName>
+        <finalName>ssm</finalName>
         <pluginManagement>
             <plugins>
 
