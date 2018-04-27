@@ -74,23 +74,13 @@ $(function() {
         }
         
         $("#login_ok").attr("disabled", true).val('登陆中..');
-        /*
-        var key = CryptoJS.enc.Base64.parse($("#j_randomKey").val());
-        var iv = CryptoJS.enc.Latin1.parse('0102030405060708');
-        var password = CryptoJS.AES.encrypt($("#j_password").val(), key, {iv:iv, mode:CryptoJS.mode.CBC, padding:CryptoJS.pad.Pkcs7 });
-        
-        $("#j_password").val(password)
-        */
-        
-        //return true;
-        
         location.href = 'index.jsp'
         
     });
 });
 function changeCode(){
 
-    $("#captcha_img").attr("src", "/captcha?timestamp=" + (new Date()).valueOf());
+    $("#captcha_img").attr("src", "/admin/captcha?timestamp=" + (new Date()).valueOf());
 }
 
 function choose_bg() {
