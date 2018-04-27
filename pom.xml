@@ -5,7 +5,7 @@
     <artifactId>ssm</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>ssm Maven Webapp</name>
+    <name>ssm</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -305,7 +305,7 @@
 
     <!-- 需要的插件 -->
     <build>
-        <finalName>ssm</finalName>
+        <finalName>ssm-bjui</finalName>
         <pluginManagement>
             <plugins>
 
