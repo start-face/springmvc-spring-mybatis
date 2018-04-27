@@ -24,10 +24,13 @@
         </property>
     </bean>
 
-    <mvc:resources mapping="/common/**" location="/common/"/>
-    <mvc:resources mapping="/js/**" location="/js/"/>
-    <mvc:resources mapping="/images/**" location="/images/"/>
-    <mvc:resources mapping="/css/**" location="/css/"/>
+    <!--允许加载/访问静态资源 在SpringMVC3.0之后推荐使用-->
+    <mvc:default-servlet-handler/>
+    <!--以下方式访问静态资源会出问题  即:夹在不到.json文件  报405-->
+    <!--<mvc:resources mapping="/common/**" location="/common/"/>-->
+    <!--<mvc:resources mapping="/js/**" location="/js/"/>-->
+    <!--<mvc:resources mapping="/images/**" location="/images/"/>-->
+    <!--<mvc:resources mapping="/css/**" location="/css/"/>-->
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"/>

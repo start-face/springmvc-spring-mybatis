@@ -4,7 +4,6 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
   
   <context-param>
     <param-name>contextConfigLocation</param-name>
@@ -65,4 +64,8 @@
   <session-config>
     <session-timeout>15</session-timeout>
   </session-config>
+
+    <!--<welcome-file-list>-->
+        <!--<welcome-file>login.jsp</welcome-file>-->
+    <!--</welcome-file-list>-->
 </web-app>
