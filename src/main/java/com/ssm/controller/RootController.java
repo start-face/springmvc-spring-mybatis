@@ -14,13 +14,15 @@ import javax.servlet.http.HttpServletRequest;
 public class RootController {
 
     @RequestMapping("login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
     @RequestMapping("index")
-    public String index(HttpServletRequest request){
+    public String index(HttpServletRequest request) {
 
+        String string = request.getSession().getAttribute("randomString").toString();
+        System.err.println("conde:" + string);
         //在这判断登录
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -28,7 +30,7 @@ public class RootController {
         System.err.println("userName:********" + username);
         System.err.println("passWord:********" + password);
 
-        if (!"".equals(username) && !"".equals(password)){
+        if (!"".equals(username) && !"".equals(password)) {
             //登录成功跳转后台
             return "index";
         }

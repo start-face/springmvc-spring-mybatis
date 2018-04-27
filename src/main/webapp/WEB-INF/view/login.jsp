@@ -89,8 +89,10 @@ $(function() {
     });
 });
 function changeCode(){
-    $("#captcha_img").attr("src", "sys/login/getCaptcha?t="+ (new Date().getTime()));
+
+    $("#captcha_img").attr("src", "/captcha?timestamp=" + (new Date()).valueOf());
 }
+
 function choose_bg() {
     var bg = Math.floor(Math.random() * 9 + 1);
     $('body').css('background-image', 'url(/common/images/loginbg_0'+ bg +'.jpg)');
@@ -131,7 +133,7 @@ function choose_bg() {
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon-password"><span class="glyphicon glyphicon-exclamation-sign"></span></span>
                     <input type="text" class="form-control" id="j_captcha" name="captcha" placeholder="验证码" aria-describedby="sizing-addon-password">
-                    <span class="input-group-addon code" id="basic-addon-code"><img id="captcha_img" src="/code/show" alt="点击更换" title="点击更换" class="m"></span>
+                    <span class="input-group-addon code" id="basic-addon-code"><img id="captcha_img" src="/captcha" alt="点击更换" title="点击更换" class="m"></span>
                 </div>
             </div>
             <div class="form-group">
@@ -145,6 +147,7 @@ function choose_bg() {
             </div>
             <div class="text-center">
                 <hr>
+                欢迎访问XXX后台系统
             </div>
         </form>
     </div>

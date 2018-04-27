@@ -26,9 +26,9 @@
 
         <!-- oracle连接 -->
         <!--<dependency>-->
-            <!--<groupId>com.oracle</groupId>-->
-            <!--<artifactId>ojdbc6</artifactId>-->
-            <!--<version>11.2.0.1.0</version>-->
+        <!--<groupId>com.oracle</groupId>-->
+        <!--<artifactId>ojdbc6</artifactId>-->
+        <!--<version>11.2.0.1.0</version>-->
         <!--</dependency>-->
 
         <dependency>
@@ -235,10 +235,10 @@
         </dependency>
 
         <!--<dependency>-->
-            <!--<groupId>pro.cg</groupId>-->
-            <!--<artifactId>mojo</artifactId>-->
-            <!--<version>2.0</version>-->
-            <!--&lt;!&ndash;<version>1.1</version>&ndash;&gt;-->
+        <!--<groupId>pro.cg</groupId>-->
+        <!--<artifactId>mojo</artifactId>-->
+        <!--<version>2.0</version>-->
+        <!--&lt;!&ndash;<version>1.1</version>&ndash;&gt;-->
         <!--</dependency>-->
 
         <dependency>
