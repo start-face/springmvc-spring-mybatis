@@ -12,6 +12,8 @@ public class UserModel {
     private Long id;
     private String userName;
     private String passWord;
+    private Integer auth;
+
 
     @Override
     public String toString() {

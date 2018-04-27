@@ -37,4 +37,9 @@ public class RootController {
         //登录失败跳回原来的页面
         return "redirect:/login";
     }
+
+    @RequestMapping("show")
+    public String show(){
+        return "success";
+    }
 }

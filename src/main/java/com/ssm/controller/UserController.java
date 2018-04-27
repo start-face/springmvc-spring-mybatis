@@ -23,7 +23,7 @@ public class UserController {
     @RequestMapping("/show")
     public String showUser(HttpServletRequest request) {
 
-        List<UserModel> userModel = userService.findUserByUserName(new UserModel().setUserName("tom"));
+        List<UserModel> userModel = userService.findUserByUserName(new UserModel());
         request.setAttribute("user", userModel);
         return "success";
     }
