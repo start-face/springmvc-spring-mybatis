@@ -26,7 +26,7 @@ public class AdminController {
     private AdminService adminService;
 
     @RequestMapping("/insertUser")
-    public String insertUser(){
+    public String insertUser() {
 
         UserModel userModel = new UserModel();
         boolean result = adminService.insertUser(userModel);
@@ -34,15 +34,18 @@ public class AdminController {
         return "";
     }
 
-    @RequestMapping("")
-    public String index(){
+    @RequestMapping("/index")
+    public String index(HttpServletRequest request) {
 
-        return "";
+        Object currentUser = request.getSession().getAttribute("currentUser");
+        System.err.println(currentUser);
+        return "index";
     }
 
     /**
      * 前端请求的入口
-     * @param request 请求
+     *
+     * @param request  请求
      * @param response 响应
      * @throws IOException 异常
      */
