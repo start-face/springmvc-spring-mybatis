@@ -24,6 +24,21 @@
         </property>
     </bean>
 
+    <mvc:interceptors>
+
+        <!--拦截管理员请求路径-->
+        <mvc:interceptor>
+            <mvc:mapping path="/admin/*"/>
+            <bean class="com.ssm.interceptor.AdminInterceptor"/>
+        </mvc:interceptor>
+
+        <!--拦截普通用户请求路径-->
+        <mvc:interceptor>
+            <mvc:mapping path="/user/*"/>
+            <bean class="com.ssm.interceptor.AdminInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--允许加载/访问静态资源 在SpringMVC3.0之后推荐使用-->
     <mvc:default-servlet-handler/>
     <!--以下方式访问静态资源会出问题  即:夹在不到.json文件  报405-->

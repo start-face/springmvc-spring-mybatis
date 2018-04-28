@@ -41,18 +41,4 @@ public class AdminController {
         System.err.println(currentUser);
         return "index";
     }
-
-    /**
-     * 前端请求的入口
-     *
-     * @param request  请求
-     * @param response 响应
-     * @throws IOException 异常
-     */
-    @RequestMapping(value = "/captcha", method = RequestMethod.GET)
-    @ResponseBody
-    public void captcha(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
-        CaptchaUtil.outputCaptcha(request, response);
-    }
 }

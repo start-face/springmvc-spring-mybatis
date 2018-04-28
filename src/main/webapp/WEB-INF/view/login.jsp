@@ -216,7 +216,7 @@
 
         function changeCode() {
 
-            $("#captcha_img").attr("src", "/admin/captcha?timestamp=" + (new Date()).valueOf());
+            $("#captcha_img").attr("src", "/captcha?timestamp=" + (new Date()).valueOf());
         }
 
         function choose_bg() {
@@ -256,9 +256,10 @@
     }
 </style>
 <div id="errorie">
-    <div>您还在使用老掉牙的IE，请升级您的浏览器到 IE8以上版本 <a target="_blank"
-                                          href="http://windows.microsoft.com/zh-cn/internet-explorer/ie-8-worldwide-languages">点击升级</a>&nbsp;&nbsp;强烈建议您更改换浏览器：<a
-            href="http://down.tech.sina.com.cn/content/40975.html" target="_blank">谷歌 Chrome</a></div>
+    <div>您还在使用老掉牙的IE，请升级您的浏览器到 IE8以上版本
+        <a target="_blank" href="http://windows.microsoft.com/zh-cn/internet-explorer/ie-8-worldwide-languages">点击升级</a>
+        &nbsp;&nbsp;强烈建议您更改换浏览器：<a href="http://down.tech.sina.com.cn/content/40975.html" target="_blank">谷歌 Chrome</a>
+        </div>
 </div>
 <![endif]-->
 <div class="container">
