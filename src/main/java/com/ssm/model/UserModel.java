@@ -12,8 +12,9 @@ public class UserModel {
     private Long id;
     private String userName;
     private String passWord;
+    private String mail;
+    private String phone;
     private Integer auth;
-
 
     @Override
     public String toString() {
@@ -21,6 +22,9 @@ public class UserModel {
                 .add("id", id)
                 .add("userName", userName)
                 .add("passWord", passWord)
+                .add("mail", mail)
+                .add("phone", phone)
+                .add("auth", auth)
                 .toString();
     }
 
@@ -48,6 +52,33 @@ public class UserModel {
 
     public UserModel setPassWord(String passWord) {
         this.passWord = passWord;
+        return this;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public UserModel setMail(String mail) {
+        this.mail = mail;
+        return this;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public UserModel setPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+    public Integer getAuth() {
+        return auth;
+    }
+
+    public UserModel setAuth(Integer auth) {
+        this.auth = auth;
         return this;
     }
 }

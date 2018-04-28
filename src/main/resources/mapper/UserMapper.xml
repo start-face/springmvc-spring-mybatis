@@ -10,11 +10,11 @@
 
     <!--mysql查询一条记录-->
     <select id="findUserByUserName" parameterType="com.ssm.model.UserModel" resultType="com.ssm.model.UserModel">
-        SELECT * FROM user_model WHERE username=#{userName}
+        SELECT * FROM user_model WHERE userName=#{userName}
     </select>
 
     <!--mysql添加一条记录-->
     <insert id="insertOne" parameterType="com.ssm.model.UserModel">
-        insert into user_model(userName,passWord) values (#{userName},#{passWord})
+        insert into user_model(userName,passWord,mail,phone,auth) values (#{userName},#{passWord},#{mail},#{phone},#{auth})
     </insert>
 </mapper>

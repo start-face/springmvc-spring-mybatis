@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface UserService {
 
-    List<UserModel> findUserByUserName(UserModel userModel);
+    UserModel findUserByUserName(UserModel userModel);
 
     UserModel insertOne(UserModel userModel);
 }

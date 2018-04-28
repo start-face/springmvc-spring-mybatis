@@ -11,7 +11,7 @@ import java.util.List;
 
 public interface UserMapper {
 
-    List<UserModel> findUserByUserName(UserModel userModel);
+    UserModel findUserByUserName(UserModel userModel);
 
     void insertOne(UserModel userModel);
 }
