@@ -49,12 +49,6 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
 
-  <servlet>
-    <servlet-name>initAdmin</servlet-name>
-    <servlet-class>com.ssm.config.predefined.InitAdmin</servlet-class>
-    <load-on-startup>0</load-on-startup>
-  </servlet>
-
   <!-- 配置允许跨域访问
   <filter-mapping>
     <filter-name>CorsFilter</filter-name>

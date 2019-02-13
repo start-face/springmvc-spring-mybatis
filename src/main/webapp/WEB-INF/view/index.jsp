@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
@@ -5,7 +6,7 @@
   Time: 9:15
   To change this template use Ffa fa-barsile | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -160,11 +161,25 @@
         </div>
         <nav class="collapse navbar-collapse" id="bjui-top-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="datetime"><a><span id="bjui-date">0000/00/00</span> <span id="bjui-clock">00:00:00</span></a></li>
-                <li><a href="#">账号：BJUI</a></li>
-                <li><a href="#">角色：管理员</a></li>
-                <li><a href="" data-toggle="dialog" data-id="sys_user_changepass" data-mask="true" data-width="400" data-height="300">修改密码</a></li>
-                <li><a href="" style="font-weight:bold;">&nbsp;<i class="fa fa-power-off"></i> 注销登陆</a></li>
+                <li class="datetime"><a><span id="bjui-date">0000-00-00</span> <span id="bjui-clock">00:00:00</span></a></li>
+                <li><a href="#">账号：${user.userName}</a></li>
+                <li><a href="#">角色：
+                    <c:if test="${user.auth eq 1}">
+                        管理员
+                    </c:if>
+                    <c:if test="${user.auth eq 0}">
+                        普通用户
+                    </c:if>
+                </a></li>
+                <li>
+                    <c:if test="${user.auth eq 1}">
+                        <a href="/admin/updatePassWordPage" data-toggle="dialog" data-id="sys_user_changepass" data-mask="true" data-width="400" data-height="300">修改密码</a>
+                    </c:if>
+                    <c:if test="${user.auth eq 0}">
+                        <a href="/user/updatePassWord" data-toggle="dialog" data-id="sys_user_changepass" data-mask="true" data-width="400" data-height="300">修改密码</a>
+                    </c:if>
+                </li>
+                <li><a href="/logout" style="font-weight:bold;">&nbsp;<i class="fa fa-power-off"></i> 注销登陆</a></li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle bjui-fonts-tit" data-toggle="dropdown" title="更改字号"><i class="fa fa-font"></i> 大</a>
                     <ul class="dropdown-menu" role="menu" id="bjui-fonts">
                         <li><a href="javascript:;" class="bjui-font-a" data-toggle="fonts"><i class="fa fa-font"></i> 特大</a></li>

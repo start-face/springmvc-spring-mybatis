@@ -9,10 +9,9 @@ import java.util.List;
  * @author FaceFeel
  * @Created 2018-01-28 19:44
  */
-@Repository
 public interface UserService {
 
-    UserModel findUserByUserName(UserModel userModel);
+    UserModel findUserByUserName(String userName);
 
-    UserModel insertOne(UserModel userModel);
+    UserModel findUserByUserNameAndPassWord(String userName, String passWord);
 }

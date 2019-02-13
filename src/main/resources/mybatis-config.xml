@@ -6,12 +6,12 @@
 
     <!-- 配置映射类的别名 -->
     <!--<typeAliases>-->
-        <!--<typeAlias alias="User" type="cn.ffyz.user.domain.User"/>-->
+        <!--<typeAlias alias="User" type="com.ssm.model.User"/>-->
     <!--</typeAliases>-->
 
     <!-- 配置Mapper文件的路径,接口Dao的实现 -->
     <mappers>
-        <mapper resource="mapper/StudentMapper.xml"/>
         <mapper resource="mapper/UserMapper.xml"/>
+        <mapper resource="mapper/AdminMapper.xml"/>
     </mappers>
 </configuration>

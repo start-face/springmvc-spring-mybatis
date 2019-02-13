@@ -1,13 +1,13 @@
 [
   {"name":"用户相关操作", "children":
   [
-    {"id":"base-button", "name":"显示所有用户", "target":"navtab", "url":"/user/show"},
-    {"id":"base-input", "name":"添加用户", "target":"navtab", "url":"/student/list"},
+    {"id":"base-button", "name":"显示所有用户", "target":"navtab", "url":"/admin/getUserList"},
+    {"id":"base-input", "name":"添加用户", "target":"navtab", "url":"/registerPage"},
     {"id":"base-select", "name":"删除用户", "target":"navtab", "url":"html/form/select.html"},
     {"id":"base-checkbox", "name":"编辑用户", "target":"navtab", "url":"html/form/checkbox.html"},
     {"id":"base-datepicker", "name":"导出用户", "target":"navtab", "url":"html/form/datepicker.html"}
   ]},
   {"name":"综合应用", "children":[
-    {"id":"base-demo-form", "name":"查看系统数据", "target":"navtab", "url":"/user/show"}
+    {"id":"base-demo-form", "name":"查看系统数据", "target":"navtab", "url":"/admin/getUserList"}
   ]}
 ]

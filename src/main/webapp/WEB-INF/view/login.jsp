@@ -93,21 +93,21 @@
             } else {
                 $("#j_username").focus();
             }
-            $("#captcha_img").click(function () {
-                changeCode();
-            });
+            // $("#captcha_img").click(function () {
+            //     changeCode();
+            // });
 
             $("#login_ok").click(function () {
 
-                if (!checkbox()) {
-                    alert("未填写完整");
-                    return false;
-                }
-
-                if (!checkCode()) {
-                    alert("验证码填写错误,请重试!")
-                    return false;
-                }
+                // if (!checkbox()) {
+                //     alert("未填写完整");
+                //     return false;
+                // }
+                //
+                // if (!checkCode()) {
+                //     alert("验证码填写错误,请重试!")
+                //     return false;
+                // }
 
                 var issubmit = true;
                 var i_index = 0;
@@ -165,9 +165,13 @@
                 data: {"userName": userName,"passWord":passWord},
                 success: function (data) {
 
+                    if (data === 0) {
+                        window.location.href = "/user/index";
+                    }
                     if (data === 1) {
                         window.location.href = "/admin/index";
-                    } else {
+                    }
+                    if(data === 2) {
                         $("#login_ok").attr("disabled", false).val();
                         alert("帐号或密码错误,请重试!")
                     }
@@ -273,7 +277,7 @@
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon-user"><span
                             class="glyphicon glyphicon-user"></span></span>
-                    <input type="text" class="form-control" id="j_username" name="username" value="" placeholder="登录账号"
+                    <input type="text" class="form-control" id="j_username" name="userName" value="admin" placeholder="登录账号"
                            aria-describedby="sizing-addon-user">
                 </div>
             </div>
@@ -281,7 +285,7 @@
                 <div class="input-group">
                     <span class="input-group-addon" id="sizing-addon-password"><span
                             class="glyphicon glyphicon-lock"></span></span>
-                    <input type="password" class="form-control" id="j_password" name="password" placeholder="登录密码"
+                    <input type="password" class="form-control" id="j_password" value="123456" name="passWord" placeholder="登录密码"
                            aria-describedby="sizing-addon-password">
                 </div>
             </div>

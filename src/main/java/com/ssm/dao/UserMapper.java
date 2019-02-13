@@ -1,8 +1,7 @@
 package com.ssm.dao;
 
 import com.ssm.model.UserModel;
-
-import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * @author FaceFeel
@@ -11,7 +10,13 @@ import java.util.List;
 
 public interface UserMapper {
 
-    UserModel findUserByUserName(UserModel userModel);
+    UserModel findUserByUserName(String userName);
 
-    void insertOne(UserModel userModel);
+    /**
+     * 传入多参数需要这么处理,否则会报错
+     * @param userName
+     * @param passWord
+     * @return
+     */
+    UserModel findUserByUserNameAndPassWord(@Param("userName")String userName, @Param("passWord")String passWord);
 }
